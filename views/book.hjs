@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ title }}</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+  <header><esi:include src="https://kwasniew.github.io/menu.html" /></header>
+  <h1>{{ title }} {{# subtitle}} - {{ subtitle }}{{/ subtitle}}</h1>
+  <p>{{# cover}}<img src="{{ cover }}" alt="{{ title}}" />{{/ cover}}</p>
+  <footer><esi:include src="https://kwasniew.github.io/footer.html" /></footer>
+</body>
+</html>
