@@ -6,8 +6,26 @@
 </head>
 <body>
   <header><esi:include src="https://kwasniew.github.io/menu.html" /></header>
-  <h1>{{ title }} {{# subtitle}} - {{ subtitle }}{{/ subtitle}}</h1>
-  <p>{{# cover}}<img src="{{ cover }}" alt="{{ title}}" />{{/ cover}}</p>
-  <footer><esi:include src="https://kwasniew.github.io/footer.html" /></footer>
-</body>
-</html>
+  <h2>Rest api</h1>
+    <h3>{{ title }} {{# subtitle}} - {{ subtitle }}{{/ subtitle}}</h3>
+    <p>{{# cover}}<img src="{{ cover }}" alt="{{ title}}" />{{/ cover}}</p>
+    <h2>ESI</h2>
+    <esi:include src="http://localhost:3001/stock/{{ isbn }}" />
+    <footer>
+      <a id="link" href="https://kwasniew.github.io/footer.html">link</a>
+    </footer>
+    <script>
+    function replaceLink() {
+      var link = document.getElementById('link');
+
+      fetch('https://kwasniew.github.io/footer.html')
+      .then(function(response) {
+        return response.text()
+      }).then(function(body) {
+        link.innerHTML = body;
+      })
+    }
+    replaceLink();
+    </script>
+  </body>
+  </html>
