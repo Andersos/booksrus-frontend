@@ -11,7 +11,7 @@
     <h3>{{ title }} {{# subtitle}} - {{ subtitle }}{{/ subtitle}}</h3>
     <p>{{# cover}}<img src="{{ cover }}" alt="{{ title}}" />{{/ cover}}</p>
     <h2>ESI</h2>
-    <esi:include src="http://localhost:3001/stock/{{ isbn }}" />
+    <esi:include src="https://booksrus.herokuapp.com/stock/{{ isbn }}" />
     <footer>
       <a id="link" href="https://kwasniew.github.io/footer.html">link</a>
     </footer>
