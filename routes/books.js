@@ -9,6 +9,7 @@ router.get('/:isbn', function(req, res, next) {
   req.esiOptions = {
     headers: {
       'Accept': 'text/html'
+      'x-request-id': req.get('x-request-id')
     }
   };
   goodGuy({url: `${BOOK_SERVICE_URL}${req.params.isbn}`, json: true}).then((data) => {
