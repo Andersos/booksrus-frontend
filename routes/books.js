@@ -17,7 +17,8 @@ router.get('/:isbn', function(req, res, next) {
       title: jp.value(data.body, '$..title'),
       subtitle: jp.value(data.body, '$..subtitle'),
       cover: jp.value(data.body, '$..thumbnail'),
-      isbn: req.params.isbn
+      isbn: req.params.isbn,
+      id: req.get('x-request-id')
     };
     res.render('book', pageData);
   })

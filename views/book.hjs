@@ -3,6 +3,7 @@
 <head>
   <title>{{ title }}</title>
   <link rel='stylesheet' href='/stylesheets/style.css' />
+  <meta name="x-request-id" content="{{ id }}">
 </head>
 <body>
   <header><esi:include src="https://kwasniew.github.io/menu.html" /></header>
