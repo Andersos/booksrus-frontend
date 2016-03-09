@@ -8,7 +8,7 @@ var BOOK_SERVICE_URL = 'https://book-catalog-proxy-4.herokuapp.com/book?isbn=';
 router.get('/:isbn', function(req, res, next) {
   req.esiOptions = {
     headers: {
-      'Accept': 'text/html'
+      'Accept': 'text/html',
       'x-request-id': req.get('x-request-id')
     }
   };
